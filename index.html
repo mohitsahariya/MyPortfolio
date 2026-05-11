@@ -652,14 +652,20 @@ footer {
   .timeline::before { display: none; }
   .timeline-item { padding-left: 0; }
   .timeline-dot { display: none; }
+@media(max-width:768px){ 
+  .projects-grid { 
+    grid-template-columns: 1fr; 
+  } 
+}
 }
 
 /* ── PROJECT CARDS ── */
 #projects { background: var(--navy); }
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 28px;
+
 }
 .project-card {
   background: var(--card-bg);
@@ -1150,9 +1156,6 @@ footer {
         <a href="https://mohitsahariya.github.io/hr-analytics/hr_analytics_dashboard.html" target="_blank" class="pc-btn" style="background:rgba(16,185,129,0.85);color:#fff;">View Dashboard →</a>
       </div>
     </div>
- 
-  </div>
-</section>
 
    <!-- E-COMMERCE CARD -->
     <div class="project-card" style="--pc-accent:#FBBF24;--pc-glow:rgba(251,191,36,0.13);">
@@ -1188,6 +1191,9 @@ footer {
         <a href="https://github.com/mohitsahariya/E-Commerce-Store-Analysis-" target="_blank" class="pc-btn" style="background:rgba(251,191,36,0.85);color:#070E1A;">View on GitHub →</a>
       </div>
     </div>
+
+   </div>
+</section>
 
 <!-- ── CERTIFICATIONS ── -->
 <section id="certifications" style="background:var(--navy-mid); padding: 100px 60px;">
